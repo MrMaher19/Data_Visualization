@@ -1,0 +1,14 @@
+# Histogram for 'Age'
+plt.hist(df['Age'].dropna(), bins=20, edgecolor='black')
+plt.xlabel("Age")
+plt.ylabel("Frequency")
+plt.show()
+
+url = "https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv"
+df = pd.read_csv(url)
+
+# Histogram for 'Age' using seaborn
+sns.histplot(data=df, x='Age', bins=20, kde=True)
+plt.xlabel("Age")
+plt.ylabel("Frequency")
+plt.show()
