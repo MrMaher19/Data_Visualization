@@ -1,0 +1,12 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+url = "https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv"
+df = pd.read_csv(url)
+
+# Line plot in seaborn:
+sns.lineplot(data=df, x='Age', y='Survived')
+plt.xlabel("Age")
+plt.ylabel("Average Survival Rate")
+plt.show()
