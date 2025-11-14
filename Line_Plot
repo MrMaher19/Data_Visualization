@@ -1,0 +1,13 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+url = "https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv"
+df = pd.read_csv(url)
+
+# Line plot:
+survival_by_age = df.groupby('Age')['Survived'].mean()
+plt.plot(survival_by_age.index, survival_by_age.values, marker='o', linestyle='-')
+plt.xlabel("Age")
+plt.ylabel("Average Survival Rate")
+plt.show()
